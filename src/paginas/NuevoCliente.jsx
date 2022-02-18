@@ -1,11 +1,13 @@
 import React from 'react'
 
-const nuevoCliente = () => {
+
+const NuevoCliente = () => {
   return (
     <div>
-       <h1>nuevoCliente</h1>
+       <h1> tafur tu nuevo cliente</h1>
+       
         </div>
   )
 }
 
-export default nuevoCliente
+export default NuevoCliente
