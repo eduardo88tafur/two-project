@@ -9,7 +9,7 @@ function App() {
     <div>
       <BrowserRouter>
          <Routes> 
-            <Route path="/Clientes" element={<Layout />}>
+            <Route path="/clientes" element={<Layout />}>
             <Route index element={<Inicio />} />
             <Route path="nuevo" element={<NuevoCliente />} />
             <Route path="editar" element={<EditarCliente />} />
