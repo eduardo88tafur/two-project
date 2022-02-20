@@ -13,6 +13,7 @@ function App() {
             <Route index element={<Inicio />} />
             <Route path="nuevo" element={<NuevoCliente />} />
             <Route path="editar" element={<EditarCliente />} />
+            
           </Route>
         </Routes>
       </BrowserRouter>
