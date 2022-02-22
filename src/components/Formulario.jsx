@@ -1,25 +1,27 @@
 import React from "react";
-import { Formik, Form, Field,} from "formik";
+import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import Alerta from "./Alerta";
 
 const Formulario = () => {
   const nuevoClienteSchema = Yup.object().shape({
     nombre: Yup.string()
-                .min(4,"el nombre es muy corto")
-                .max(10,'el nombre es muy largo')
-              .required("el nombre del cliente es obligatorio"),
-    empresa:Yup.string()
-    .min(4,"el nombre es muy corto")
-    .max(10,'el nombre es muy largo')
-  .required("el nombre de la empresa  es obligatorio"),
-    
+      .min(4, "el nombre es muy corto")
+      .max(10, "el nombre es muy largo")
+      .required("el nombre del cliente es obligatorio"),
+    empresa: Yup.string()
+      .min(4, "el nombre es muy corto")
+      .max(10, "el nombre es muy largo")
+      .required("el nombre de la empresa  es obligatorio"),
+
     email: Yup.string()
     .email()
-    .required('email obligatorio'),
-    telefono: "",
-    notas: "",
-  });
+    .required("email obligatorio"),
+    telefono: Yup.number()
+                .integer('numero invalido')
+                  .typeError('numero no es valido')
+  })
+
   return (
     <div className="bg-white mt-10 py-10 px-5 shadow-md rounded-md mx-auto">
       <h1 className="text-gray-600 font-bold text-xl text-center uppercase">
@@ -38,7 +40,7 @@ const Formulario = () => {
         }}
         validationSchema={nuevoClienteSchema}
       >
-        {({ errors,touched }) => {
+        {({ errors, touched }) => {
           console.log(touched);
           return (
             <Form>
@@ -52,10 +54,9 @@ const Formulario = () => {
                   placeholder="nombre del cliente"
                   name="nombre"
                 />
-                {errors.nombre && touched.nombre ?(
-                   <Alerta>{errors.nombre}</Alerta>
-                ): null}
-                
+                {errors.nombre && touched.nombre ? (
+                  <Alerta>{errors.nombre}</Alerta>
+                ) : null}
               </div>
               <div className="mb-4">
                 <label className="text-gray-800" htmlFor="empresa">
@@ -67,10 +68,9 @@ const Formulario = () => {
                   placeholder="nombre de la empresa"
                   name="empresa"
                 />
-                {errors.empresa && touched.empresa ?(
-                   <Alerta>{errors.empresa}</Alerta>
-                ): null}
-
+                {errors.empresa && touched.empresa ? (
+                  <Alerta>{errors.empresa}</Alerta>
+                ) : null}
               </div>
               <div className="mb-4">
                 <label className="text-gray-800" htmlFor="Email">
@@ -82,10 +82,10 @@ const Formulario = () => {
                   placeholder="ingrese el email"
                   name="email"
                 />
-                
-                {errors.email&& touched.email ?(
-                   <Alerta>{errors.email}</Alerta>
-                ): null}
+
+                {errors.email && touched.email ? (
+                  <Alerta>{errors.email}</Alerta>
+                ) : null}
               </div>
               <div className="mb-4">
                 <label className="text-gray-800" htmlFor="telefono">
@@ -95,8 +95,11 @@ const Formulario = () => {
                   type="tel"
                   className="mt-2 block w-full p-3 bg-gray-50"
                   placeholder="ingrese el telefono"
-                  name=" telefono"
+                  name="telefono"
                 />
+                {errors.telefono && touched.telefono ? (
+                  <Alerta>{errors.telefono}</Alerta>
+                ) : null}
               </div>
               <div className="mb-4">
                 <label className="text-gray-800" htmlFor="Notas">
