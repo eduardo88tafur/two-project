@@ -21,6 +21,29 @@ const Formulario = () => {
                 .integer('numero invalido')
                   .typeError('numero no es valido')
   })
+   const handleSubmit=async(valores)=>{
+    //  console.log(valores);
+    //  valores = {
+    //    ...valores,
+    //    id: 1,
+    //  }
+     try{
+       const url= "http://localhost:4000/clientes"
+      const respuesta=await fetch(url,{
+
+         method:"POST",
+         body: JSON.stringify(valores),
+         headers:{
+           "Content-Type":"application/json"
+         }
+       })
+       console.log(respuesta);
+       const resultado= await respuesta.json()
+       console.log(resultado);
+     }catch(error){
+       console.log(error);
+     }
+   }
 
   return (
     <div className="bg-white mt-10 py-10 px-5 shadow-md rounded-md mx-auto">
@@ -36,7 +59,7 @@ const Formulario = () => {
           notas: "",
         }}
         onSubmit={(values) => {
-          console.log(values);
+          handleSubmit(values)
         }}
         validationSchema={nuevoClienteSchema}
       >

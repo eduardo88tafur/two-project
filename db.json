@@ -1,0 +1,60 @@
+{
+  "clientes": [
+    {
+      "nombre": "eduardo",
+      "empresa": "bogota",
+      "email": "correo@coreo.com",
+      "telefono": "1122334455",
+      "notas": "dgoo",
+      "id": 1
+    },
+    {
+      "nombre": "eduardo",
+      "empresa": "bogota",
+      "email": "correo@coreo.com",
+      "telefono": "1122334455",
+      "notas": "dgoo",
+      "id": 2
+    },
+    {
+      "nombre": "eduardo",
+      "empresa": "bogota",
+      "email": "correo@coreo.com",
+      "telefono": "1122334455",
+      "notas": "dgoo",
+      "id": 3
+    },
+    {
+      "nombre": "eduardo",
+      "empresa": "bogota",
+      "email": "correo@coreo.com",
+      "telefono": "1122334455",
+      "notas": "dgoo",
+      "id": 4
+    },
+    {
+      "nombre": "eduardo",
+      "empresa": "bogota",
+      "email": "correo@coreo.com",
+      "telefono": "1122334455",
+      "notas": "dgoo",
+      "id": 5
+    },
+    {
+      "nombre": "eduardo",
+      "empresa": "bogota",
+      "email": "correo@coreo.com",
+      "telefono": "1122334455",
+      "notas": "dgoo",
+      "id": 6
+    },
+    {
+      "nombre": "eduardo",
+      "empresa": "bogota",
+      "email": "correo@coreo.com",
+      "telefono": "1122334455",
+      "notas": "dgoo",
+      "id": 7
+    }
+  ]
+}
