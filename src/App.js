@@ -4,6 +4,7 @@ import Layout from "./Layout/Layout";
 import Inicio from "./paginas/Inicio";
 import EditarCliente from "./paginas/EditarCliente";
 import NuevoCliente from "./paginas/NuevoCliente";
+import VerCliente from "./components/VerCliente"
 function App() {
   return (
     <div>
@@ -13,7 +14,7 @@ function App() {
             <Route index element={<Inicio />} />
             <Route path="nuevo" element={<NuevoCliente />} />
             <Route path="editar" element={<EditarCliente />} />
-            
+            <Route path=":id" element={<VerCliente />} />
           </Route>
         </Routes>
       </BrowserRouter>
