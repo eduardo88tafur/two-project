@@ -1,28 +1,12 @@
 {
   "clientes": [
     {
-      "nombre": "douglas ",
-      "empresa": "huevosdopi",
-      "email": "correo@coreo.com",
-      "telefono": "09887665",
-      "notas": "se vende huevos",
-      "id": 1
-    },
-    {
       "nombre": "diana ",
       "empresa": "abogados",
       "email": "correo@coreo.com",
       "telefono": "546456356",
       "notas": "te meten preso",
       "id": 2
-    },
-    {
-      "nombre": "alex",
-      "empresa": "camaras ",
-      "email": "correo@coreo.com",
-      "telefono": "878787",
-      "notas": "este tiene buen ojo",
-      "id": 3
     },
     {
       "nombre": "pepe",
@@ -33,12 +17,12 @@
       "id": 4
     },
     {
-      "nombre": "coco",
-      "empresa": "cocodrilo",
+      "nombre": "alfredo",
+      "empresa": "vallenato",
       "email": "correo@coreo.com",
-      "telefono": "333333333",
-      "notas": "note que algo falta",
-      "id": 5
+      "telefono": "878778787878",
+      "notas": "canciones ",
+      "id": 6
     }
   ]
 }
